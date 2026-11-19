@@ -1,0 +1,25 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos: se ignora el contenido pero se conserva la carpeta (.gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Sistema operativo / editores / zips
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.zip
