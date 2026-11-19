@@ -11,7 +11,7 @@ El proyecto resuelve dos problemas clave de la guía de trabajos prácticos:
 
 > **Nota:** Todos los precios y métricas de error están expresados en pesos argentinos ($ ARS). Las conclusiones detalladas se encuentran en [`reports/conclusiones.md`](reports/conclusiones.md) y en el informe técnico [`docs/informe.docx`](docs/informe.docx).
 
-![Selección de k](reports/figures/ej6_k_vs_rmse.png)
+
 
 ---
 
