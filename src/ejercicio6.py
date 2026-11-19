@@ -11,7 +11,6 @@ Ejecución directa:
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.dummy import DummyRegressor
 from sklearn.model_selection import cross_val_score, train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import Pipeline
@@ -97,11 +96,7 @@ def ejecutar_ejercicio6():
     print("\n--- Métricas del Modelo Final en Prueba (k=15, weights='distance') ---")
     mae, rmse, r2 = evaluar(y_test, y_pred)
 
-    # Comparación con modelo Baseline (media)
-    baseline = DummyRegressor(strategy="mean").fit(X_train, y_train)
-    y_base = baseline.predict(X_test)
-    print("\n--- Métricas de Referencia (Baseline: Media) ---")
-    evaluar(y_test, y_base)
+
 
     # 7. Estimación de un anuncio (primera fila de X_test)
     nuevo = X_test.iloc[[0]]

@@ -9,7 +9,6 @@ Ejecución directa:
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.dummy import DummyRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
@@ -79,11 +78,6 @@ def ejecutar_ejercicio3():
     print(f"Intercepto: {modelo.intercept_:,.2f}")
     print(f"Pendiente:  {modelo.coef_[0]:,.2f} pesos por reseña")
 
-    # Comparación con modelo Baseline (media)
-    baseline = DummyRegressor(strategy="mean").fit(X_train, y_train)
-    y_base = baseline.predict(X_test)
-    print("\n--- Métricas de Referencia (Baseline: Media) ---")
-    evaluar(y_test, y_base)
 
     # 8. Estimación para anuncio con 50 reseñas
     caso_50 = pd.DataFrame({"number_of_reviews": [50]})
