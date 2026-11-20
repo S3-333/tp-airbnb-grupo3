@@ -11,9 +11,8 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Datos: se ignora el contenido pero se conserva la carpeta (.gitkeep)
-data/raw/*
-!data/raw/.gitkeep
+# Datos generados/procesados: se ignora el contenido pero se conserva la carpeta (.gitkeep)
+# Nota: data/raw/ (listings.csv.gz) se versiona por motivos académicos
 data/processed/*
 !data/processed/.gitkeep
 

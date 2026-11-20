@@ -24,8 +24,8 @@ proyecto-airbnb/
 ├── pyproject.toml              # Configuración de herramientas y pytest
 ├── requirements.txt            # Dependencias del proyecto
 ├── data/
-│   ├── raw/                    # listings.csv.gz original (Inside Airbnb)
-│   └── processed/              # Datasets limpios generados por los ejercicios
+│   ├── raw/                    # listings.csv.gz original (Inside Airbnb, conservado por fines académicos)
+│   └── processed/              # Datasets limpios generados por los ejercicios (ignorado por Git)
 ├── notebooks/
 │   └── 01_eda.ipynb            # Análisis exploratorio simple y decisiones de modelado
 ├── src/
@@ -103,9 +103,12 @@ En `notebooks/01_eda.ipynb` se encuentra el análisis exploratorio que examina y
 
 ---
 
-## 5. Obtención de los Datos Crudos
+## 5. Obtención y Disponibilidad de los Datos Crudos
 
-El archivo de datos original (`listings.csv.gz`) se encuentra en `data/raw/` o puede descargarse directamente de:
+> **Aclaración sobre el repositorio y motivos académicos:**
+> Versionar archivos de datos crudos pesados en Git se considera habitualmente una mala práctica en ingeniería de software y ciencia de datos (donde se suele recurrir a almacenamiento externo como S3, DVC o scripts de descarga). Sin embargo, **por cuestiones estrictamente académicas y para facilitar la revisión, corrección y reproducibilidad inmediata**, el archivo comprimido original **`listings.csv.gz` se mantiene incluido y versionado en el repositorio** dentro de `data/raw/`.
+
+En caso de requerir reponer el archivo si se eliminara o si se deseara consultar la fuente original actualizada:
 1. Visitar [Inside Airbnb - Buenos Aires](https://insideairbnb.com/get-the-data/).
 2. Descargar el archivo **`listings.csv.gz`** (*Detailed Listings data*).
 3. Ubicarlo en la carpeta `data/raw/listings.csv.gz` sin descomprimir.

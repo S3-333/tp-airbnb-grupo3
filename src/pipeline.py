@@ -40,6 +40,9 @@ def cargar_datos(ruta: Path | str | None = None) -> pd.DataFrame:
     ----------
     ruta : Path o str, opcional
         Ruta al archivo comprimido. Por defecto utiliza data/raw/listings.csv.gz.
+        Nota: El archivo de datos crudos se mantiene versionado en el repositorio
+        por motivos académicos (para evaluación del TP), aunque en producción
+        versionar datos pesados en Git se considera habitualmente una mala práctica.
 
     Retorna
     -------
@@ -52,7 +55,8 @@ def cargar_datos(ruta: Path | str | None = None) -> pd.DataFrame:
     if not ruta.exists():
         raise FileNotFoundError(
             f"No se encontró el archivo de datos en: {ruta}.\n"
-            "Descarga listings.csv.gz de Inside Airbnb Buenos Aires y colócalo en data/raw/."
+            "El archivo listings.csv.gz se mantiene incluido en el repositorio por razones académicas.\n"
+            "Si fue eliminado, puedes descargarlo de Inside Airbnb Buenos Aires y colocarlo en data/raw/."
         )
 
     df = pd.read_csv(ruta, compression="gzip", low_memory=False)
