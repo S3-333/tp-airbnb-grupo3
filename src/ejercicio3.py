@@ -106,15 +106,6 @@ def ejecutar_ejercicio3():
     print("\nComparación de primeras 10 observaciones de prueba:")
     print(comparacion.round(2).to_string(index=False))
 
-    # Conclusión
-    print("\n" + "=" * 65)
-    print("CONCLUSIONES EJERCICIO 3:")
-    print("1. La regresión lineal simple arroja un R² de 0.0001, prácticamente nulo.")
-    print("2. La pendiente es de apenas -7.16 ARS por reseña, indicando ausencia de relación lineal.")
-    print("3. Para 50 reseñas estima $129,989.48 ARS, prácticamente idéntico a predecir la media.")
-    print("4. Por sí sola, la cantidad de reseñas acumuladas NO es un predictor útil del precio.")
-    print("=" * 65 + "\n")
-
 
 if __name__ == "__main__":
     ejecutar_ejercicio3()

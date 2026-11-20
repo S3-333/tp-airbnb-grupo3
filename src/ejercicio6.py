@@ -133,16 +133,6 @@ def ejecutar_ejercicio6():
     print("\nComparación de primeras 10 observaciones de prueba:")
     print(comparacion.round(2).to_string(index=False))
 
-    # Conclusiones
-    print("\n" + "=" * 65)
-    print("CONCLUSIONES EJERCICIO 6:")
-    print(f"1. Con validación cruzada (5 pliegues), el menor RMSE correspondió a k = {mejor_k} ($84,456.45 ARS).")
-    print("2. El uso de weights='distance' pondera a los vecinos más cercanos, aportando una mejora sustancial.")
-    print("3. En el conjunto de prueba obtiene MAE $49,440.98, RMSE $80,753.06 y R² = 0.1920.")
-    print("4. Supera con claridad al modelo baseline (R² ≈ 0, RMSE $89,883.16), capturando un 19.2% de la varianza.")
-    print("5. La capacidad predictiva sigue teniendo margen de mejora al no incluir ubicación geográfica ni tipo de inmueble.")
-    print("=" * 65 + "\n")
-
 
 if __name__ == "__main__":
     ejecutar_ejercicio6()
